@@ -1247,10 +1247,10 @@ class StatusServerHandler(BaseHTTPRequestHandler):
             self.wfile.write(html.encode('utf-8'))
 
 def run_status_server():
-    server_address = ('0.0.0.0', 5000)
+    server_address = ('localhost', 80)
     try:
         httpd = HTTPServer(server_address, StatusServerHandler)
-        logger.info("Status HTTP server successfully started on http://localhost:8080")
+        logger.info("Status HTTP server successfully started on http://0.0.0.0:5000")
         httpd.serve_forever()
     except Exception as e:
         logger.error(f"Failed to start Status HTTP server: {e}")
