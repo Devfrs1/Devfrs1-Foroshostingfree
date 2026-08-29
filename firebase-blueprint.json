@@ -1,0 +1,26 @@
+{
+  "collections": {
+    "users": {
+      "description": "User custom profile options and preferences",
+      "fields": {
+        "uid": { "type": "string", "required": true },
+        "email": { "type": "string", "required": true },
+        "displayName": { "type": "string", "required": false },
+        "avatar": { "type": "string", "required": false },
+        "updatedAt": { "type": "timestamp", "required": true }
+      }
+    },
+    "visits": {
+      "description": "User login session and device audit log tracking visits",
+      "fields": {
+        "userId": { "type": "string", "required": true },
+        "userAgent": { "type": "string", "required": true },
+        "platform": { "type": "string", "required": true },
+        "browser": { "type": "string", "required": true },
+        "timestamp": { "type": "timestamp", "required": true },
+        "country": { "type": "string", "required": false },
+        "isMobile": { "type": "boolean", "required": true }
+      }
+    }
+  }
+}
